@@ -1,0 +1,187 @@
+alias,kind,target
+# --- Hindi city names ---
+दिल्ली,city,Delhi
+नई दिल्ली,city,Delhi
+मुंबई,city,Mumbai
+बॉम्बे,city,Mumbai
+कोलकाता,city,Kolkata
+चेन्नई,city,Chennai
+मद्रास,city,Chennai
+बेंगलुरु,city,Bengaluru
+बंगलौर,city,Bengaluru
+हैदराबाद,city,Hyderabad
+पुणे,city,Pune
+अहमदाबाद,city,Ahmedabad
+जयपुर,city,Jaipur
+लखनऊ,city,Lucknow
+कानपुर,city,Kanpur
+नागपुर,city,Nagpur
+इंदौर,city,Indore
+भोपाल,city,Bhopal
+विशाखापट्टनम,city,Visakhapatnam
+पटना,city,Patna
+दरभंगा,city,Darbhanga
+मुजफ्फरपुर,city,Muzaffarpur
+गया,city,Gaya
+रांची,city,Ranchi
+धनबाद,city,Dhanbad
+भुवनेश्वर,city,Bhubaneswar
+कटक,city,Cuttack
+रायपुर,city,Raipur
+गुवाहाटी,city,Guwahati
+शिमला,city,Shimla
+श्रीनगर,city,Srinagar
+देहरादून,city,Dehradun
+चंडीगढ़,city,Chandigarh
+तिरुवनंतपुरम,city,Thiruvananthapuram
+कोच्चि,city,Kochi
+कोझिकोड,city,Kozhikode
+मदुरै,city,Madurai
+त्रिची,city,Tiruchirappalli
+कोयंबटूर,city,Coimbatore
+सूरत,city,Surat
+वडोदरा,city,Vadodara
+राजकोट,city,Rajkot
+लुधियाना,city,Ludhiana
+अमृतसर,city,Amritsar
+आगरा,city,Agra
+वाराणसी,city,Varanasi
+प्रयागराज,city,Allahabad
+मेरठ,city,Meerut
+गाजियाबाद,city,Ghaziabad
+नोएडा,city,Noida
+गुरुग्राम,city,Gurugram
+कोल्हापुर,city,Kolhapur
+सोलापुर,city,Solapur
+औरंगाबाद,city,Aurangabad
+मालेगाव,city,Malegaon
+चांदीगढ़,city,Chandigarh
+इम्फाल,city,Imphal
+आइजोल,city,Aizawl
+कोहिमा,city,Kohima
+अगरतला,city,Agartala
+शिलॉन्ग,city,Shillong
+पणजी,city,Panaji
+गोवा,city,Panaji
+मैसूर,city,Mysuru
+हुब्बली,city,Hubballi
+बेलगावी,city,Belagavi
+मंगलौर,city,Mangaluru
+तिरुपति,city,Tirupati
+गुंटूर,city,Guntur
+विजयवाड़ा,city,Vijayawada
+वारंगल,city,Warangal
+करीमनगर,city,Karimnagar
+सिलिगुड़ी,city,Siliguri
+दार्जिलिंग,city,Darjeeling
+गंगटोक,city,Gangtok
+पंचकुला,city,Panchkula
+फरीदाबाद,city,Faridabad
+गोरखपुर,city,Gorakhpur
+इलाहाबाद,city,Allahabad
+बनारस,city,Varanasi
+जोधपुर,city,Jodhpur
+उदयपुर,city,Udaipur
+बीकानेर,city,Bikaner
+अजमेर,city,Ajmer
+कोटा,city,Kota
+सहारनपुर,city,Saharanpur
+मुरादाबाद,city,Moradabad
+अलीगढ़,city,Aligarh
+बरेली,city,Bareilly
+मिर्ज़ापुर,city,Mirzapur
+गाज़ीपुर,city,Ghazipur
+बलिया,city,Ballia
+देवरिया,city,Deoria
+आज़मगढ़,city,Azamgarh
+मऊ,city,Mau
+जौनपुर,city,Jaunpur
+चपरा,city,Chhapra
+बेगूसराय,city,Begusarai
+कटिहार,city,Katihar
+पूर्णिया,city,Purnia
+सीतामढ़ी,city,Sitamarhi
+मोतिहारी,city,Motihari
+बेतिया,city,Bettiah
+अररिया,city,Araria
+किशनगंज,city,Kishanganj
+सहरसा,city,Saharsa
+मधेपुरा,city,Madhepura
+समस्तीपुर,city,Samastipur
+मधुबनी,city,Madhubani
+नालंदा,city,Nalanda
+बिहार शरीफ,city,Bihar Sharif
+नवादा,city,Nawada
+जमुई,city,Jamui
+खगड़िया,city,Khagaria
+लखीसराय,city,Lakhisarai
+शेखपुरा,city,Sheikhpura
+औरंगाबाद बिहार,city,Aurangabad Bihar
+रोहतास,city,Bhabua
+अरवल,city,Aurangabad Bihar
+जहानाबाद,city,Aurangabad Bihar
+बक्सर,city,Buxar
+भोजपुर,city,Arrah
+सिवान,city,Siwan
+गोपालगंज,city,Gopalganj
+वैशाली,city,Vaishali
+सारण,city,Saran
+पश्चिम चंपारण,city,Bettiah
+पूर्वी चंपारण,city,Motihari
+# --- English aliases / historic names ---
+Bangalore,city,Bengaluru
+Bombay,city,Mumbai
+Calcutta,city,Kolkata
+Madras,city,Chennai
+Gurgaon,city,Gurugram
+Allahabad,city,Allahabad
+Prayagraj,city,Allahabad
+Cochin,city,Kochi
+Mysore,city,Mysuru
+Hubli,city,Hubballi
+Belgaum,city,Belagavi
+Mangalore,city,Mangaluru
+Visakhapatnam City,city,Visakhapatnam
+Pondicherry,city,Puducherry
+Panjim,city,Panaji
+# --- Hindi state names ---
+बिहार,state,Bihar
+उत्तर प्रदेश,state,Uttar Pradesh
+महाराष्ट्र,state,Maharashtra
+राजस्थान,state,Rajasthan
+पश्चिम बंगाल,state,West Bengal
+असम,state,Assam
+गुजरात,state,Gujarat
+केरल,state,Kerala
+तमिल नाडु,state,Tamil Nadu
+कर्नाटक,state,Karnataka
+तेलंगाना,state,Telangana
+आंध्र प्रदेश,state,Andhra Pradesh
+ओडिशा,state,Odisha
+उड़ीसा,state,Odisha
+पंजाब,state,Punjab
+हरियाणा,state,Haryana
+दिल्ली,state,Delhi
+मध्य प्रदेश,state,Madhya Pradesh
+झारखंड,state,Jharkhand
+छत्तीसगढ़,state,Chhattisgarh
+गोवा,state,Goa
+जम्मू और कश्मीर,state,Jammu & Kashmir
+हिमाचल प्रदेश,state,Himachal Pradesh
+उत्तराखंड,state,Uttaranchal
+त्रिपुरा,state,Tripura
+मेघालय,state,Meghalaya
+मिज़ोरम,state,Mizoram
+नागालैंड,state,Nagaland
+अरुणाचल प्रदेश,state,Arunachal Pradesh
+मणिपुर,state,Manipur
+सिक्किम,state,Sikkim
+पुडुचेरी,state,Puducherry
+चंडीगढ़,state,Chandigarh
+अंडमान और निकोबार,state,Andaman & Nicobar Islands
+लक्षद्वीप,state,Lakshadweep
+दमन और दीउ,state,Daman & Diu
+हरियाणा राज्य,state,Haryana
+# --- English state aliases ---
+Uttarakhand,state,Uttaranchal
+Orissa,state,Odisha

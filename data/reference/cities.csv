@@ -1,0 +1,269 @@
+city,state,district,lat,lon
+Delhi,Delhi,New Delhi,28.6139,77.2090
+Mumbai,Maharashtra,Mumbai,19.0760,72.8777
+Bengaluru,Karnataka,Bengaluru Urban,12.9716,77.5946
+Chennai,Tamil Nadu,Chennai,13.0827,80.2707
+Kolkata,West Bengal,Kolkata,22.5726,88.3639
+Hyderabad,Telangana,Hyderabad,17.3850,78.4867
+Ahmedabad,Gujarat,Ahmedabad,23.0225,72.5714
+Pune,Maharashtra,Pune,18.5204,73.8567
+Jaipur,Rajasthan,Jaipur,26.9124,75.7873
+Lucknow,Uttar Pradesh,Lucknow,26.8467,80.9462
+Surat,Gujarat,Surat,21.1702,72.8311
+Kanpur,Uttar Pradesh,Kanpur Nagar,26.4499,80.3319
+Nagpur,Maharashtra,Nagpur,21.1458,79.0882
+Indore,Madhya Pradesh,Indore,22.7196,75.8577
+Bhopal,Madhya Pradesh,Bhopal,23.2599,77.4126
+Visakhapatnam,Andhra Pradesh,Visakhapatnam,17.6868,83.2185
+Patna,Bihar,Patna,25.5941,85.1376
+Vadodara,Gujarat,Vadodara,22.3072,73.1812
+Ghaziabad,Uttar Pradesh,Ghaziabad,28.6692,77.4538
+Ludhiana,Punjab,Ludhiana,30.9010,75.8573
+Agra,Uttar Pradesh,Agra,27.1767,78.0081
+Nashik,Maharashtra,Nashik,19.9975,73.7898
+Faridabad,Haryana,Faridabad,28.4089,77.3178
+Meerut,Uttar Pradesh,Meerut,28.9845,77.7064
+Rajkot,Gujarat,Rajkot,22.3039,70.8022
+Varanasi,Uttar Pradesh,Varanasi,25.3176,82.9739
+Srinagar,Jammu & Kashmir,Srinagar,34.0837,74.7973
+Aurangabad,Maharashtra,Chhatrapati Sambhajinagar,19.8762,75.3433
+Dhanbad,Jharkhand,Dhanbad,23.7957,86.4304
+Amravati,Maharashtra,Amravati,20.9374,77.7796
+Navi Mumbai,Maharashtra,Thane,19.0330,73.0297
+Allahabad,Uttar Pradesh,Prayagraj,25.4358,81.8463
+Ranchi,Jharkhand,Ranchi,23.3441,85.3096
+Howrah,West Bengal,Howrah,22.5958,88.2636
+Coimbatore,Tamil Nadu,Coimbatore,11.0168,76.9558
+Gwalior,Madhya Pradesh,Gwalior,26.2183,78.1828
+Vijayawada,Andhra Pradesh,Krishna,16.5062,80.6480
+Jodhpur,Rajasthan,Jodhpur,26.2389,73.0243
+Madurai,Tamil Nadu,Madurai,9.9252,78.1198
+Raipur,Chhattisgarh,Raipur,21.2514,81.6296
+Kota,Rajasthan,Kota,25.2138,75.8648
+Chandigarh,Chandigarh,Chandigarh,30.7333,76.7794
+Guwahati,Assam,Kamrup Metropolitan,26.1445,91.7362
+Thiruvananthapuram,Kerala,Thiruvananthapuram,8.5241,76.9366
+Hubballi,Karnataka,Dharwad,15.3647,75.1240
+Tiruchirappalli,Tamil Nadu,Tiruchirappalli,10.7905,78.7047
+Bareilly,Uttar Pradesh,Bareilly,28.3670,79.4304
+Mysuru,Karnataka,Mysuru,12.2958,76.6394
+Tirupati,Andhra Pradesh,Tirupati,13.6288,79.4192
+Jabalpur,Madhya Pradesh,Jabalpur,23.1815,79.9864
+Gaya,Bihar,Gaya,24.7955,85.0002
+Moradabad,Uttar Pradesh,Moradabad,28.8386,78.7733
+Jamshedpur,Jharkhand,East Singhbhum,22.8046,86.2029
+Cuttack,Odisha,Cuttack,20.4625,85.8828
+Firozabad,Uttar Pradesh,Firozabad,27.3047,79.6033
+Kochi,Kerala,Ernakulam,9.9312,76.2673
+Bhavnagar,Gujarat,Bhavnagar,21.7645,72.1519
+Dehradun,Uttaranchal,Dehradun,30.3165,78.0322
+Noida,Uttar Pradesh,Gautam Buddh Nagar,28.5355,77.3910
+Ajmer,Rajasthan,Ajmer,26.4499,74.6399
+Thrissur,Kerala,Thrissur,10.5276,76.2144
+Anand,Gujarat,Anand,22.5645,72.9289
+Jamnagar,Gujarat,Jamnagar,22.4707,70.0577
+Udaipur,Rajasthan,Udaipur,24.5854,73.7125
+Mangaluru,Karnataka,Dakshina Kannada,12.9141,74.8560
+Tirunelveli,Tamil Nadu,Tirunelveli,8.7139,77.7567
+Bhagalpur,Bihar,Bhagalpur,25.2425,86.9842
+Kozhikode,Kerala,Kozhikode,11.2588,75.7804
+Warangal,Telangana,Warangal,17.9689,79.5941
+Saharanpur,Uttar Pradesh,Saharanpur,29.9680,77.5510
+Guntur,Andhra Pradesh,Guntur,16.3067,80.4365
+Bhilai,Chhattisgarh,Durg,21.1938,81.3509
+Nellore,Andhra Pradesh,Nellore,14.4426,79.9865
+Amritsar,Punjab,Amritsar,31.6340,74.8723
+Aligarh,Uttar Pradesh,Aligarh,27.8974,78.0880
+Salt Lake City,West Bengal,North 24 Parganas,22.5697,88.4217
+Bikaner,Rajasthan,Bikaner,28.0229,73.3119
+Agartala,Tripura,West Tripura,23.8315,91.2868
+Shillong,Meghalaya,East Khasi Hills,25.5788,91.8933
+Imphal,Manipur,Imphal West,24.8170,93.9368
+Aizawl,Mizoram,Aizawl,23.7271,92.7176
+Kohima,Nagaland,Kohima,25.6751,94.1086
+Itanagar,Arunachal Pradesh,Papum Pare,27.0844,93.6053
+Panaji,Goa,North Goa,15.4909,73.8278
+Puducherry,Puducherry,Puducherry,11.9416,79.8083
+Port Blair,Andaman & Nicobar Islands,South Andaman,11.6234,92.7265
+Daman,Daman & Diu,Daman,20.3970,72.8328
+Kavaratti,Lakshadweep,Kavaratti,10.5669,72.6420
+Shimla,Himachal Pradesh,Shimla,31.1048,77.1734
+Manali,Himachal Pradesh,Kullu,32.2432,77.1892
+Mussoorie,Uttaranchal,Dehradun,30.4598,78.0664
+Darjeeling,West Bengal,Darjeeling,27.0360,88.2627
+Gangtok,Sikkim,East Sikkim,27.3314,88.6138
+Patiala,Punjab,Patiala,30.3398,76.3869
+Gorakhpur,Uttar Pradesh,Gorakhpur,26.7606,83.3732
+Sikar,Rajasthan,Sikar,27.6094,75.1399
+Haridwar,Uttaranchal,Haridwar,29.9457,78.1642
+Rourkela,Odisha,Sundargarh,22.2604,84.8536
+Belagavi,Karnataka,Belagavi,15.8497,74.4977
+Vellore,Tamil Nadu,Vellore,12.9165,79.1325
+Chhindwara,Madhya Pradesh,Chhindwara,22.0574,78.9382
+Siliguri,West Bengal,Darjeeling,26.7271,88.3953
+Jhansi,Uttar Pradesh,Jhansi,25.4484,78.5685
+Beluru,Karnataka,Hassan,13.0000,75.8800
+Tinsukia,Assam,Tinsukia,27.4924,95.3534
+Dibrugarh,Assam,Dibrugarh,27.4728,94.9120
+Silchar,Assam,Cachar,24.8333,92.7789
+Nabadwip,West Bengal,Nadia,23.4000,88.1000
+Kharagpur,West Bengal,Paschim Medinipur,22.3460,87.2320
+Bardhaman,West Bengal,Purba Bardhaman,23.2324,87.8615
+Tatanagar,Jharkhand,East Singhbhum,22.8030,86.2030
+Bhusawal,Maharashtra,Jalgaon,21.0500,75.7900
+Solapur,Maharashtra,Solapur,17.6599,75.9064
+Kolhapur,Maharashtra,Kolhapur,16.7050,74.2433
+Akola,Maharashtra,Akola,20.7000,77.0000
+Latur,Maharashtra,Latur,18.4000,76.5700
+Panvel,Maharashtra,Raigad,18.9894,73.1175
+Thane,Maharashtra,Thane,19.2183,72.9781
+Malegaon,Maharashtra,Nashik,20.5500,74.5300
+Jalgaon,Maharashtra,Jalgaon,21.0077,75.5626
+Nanded,Maharashtra,Nanded,19.1383,77.3000
+Ratnagiri,Maharashtra,Ratnagiri,16.9900,73.3100
+Sangli,Maharashtra,Sangli,16.8500,74.6000
+Ichalkaranji,Maharashtra,Kolhapur,16.6900,74.4600
+Chandrapur,Maharashtra,Chandrapur,19.9500,79.3000
+Satara,Maharashtra,Satara,17.6800,74.0000
+Bhiwandi,Maharashtra,Thane,19.2800,73.0500
+Dhule,Maharashtra,Dhule,20.9000,74.7700
+Ujjain,Madhya Pradesh,Ujjain,23.1765,75.7885
+Rewa,Madhya Pradesh,Rewa,24.5362,81.3038
+Singrauli,Madhya Pradesh,Shahdol,24.1997,82.6750
+Burhanpur,Madhya Pradesh,Burhanpur,21.3100,76.2300
+Khandwa,Madhya Pradesh,Khandwa,21.8250,76.3500
+Satna,Madhya Pradesh,Satna,24.6000,80.6000
+Guna,Madhya Pradesh,Guna,24.6500,77.3000
+Dewas,Madhya Pradesh,Dewas,22.9600,76.0600
+Ratlam,Madhya Pradesh,Ratlam,23.3300,74.0300
+Morena,Madhya Pradesh,Morena,26.5000,78.0000
+Shivpuri,Madhya Pradesh,Shivpuri,25.4300,77.6500
+Balaghat,Madhya Pradesh,Balaghat,21.8100,80.1800
+Vizianagaram,Andhra Pradesh,Vizianagaram,18.1100,83.4100
+Eluru,Andhra Pradesh,Eluru,16.7100,81.1000
+Ongole,Andhra Pradesh,Prakasam,15.5050,80.0499
+Kurnool,Andhra Pradesh,Kurnool,15.8281,78.0373
+Rajahmundry,Andhra Pradesh,East Godavari,17.0005,81.8040
+Kakinada,Andhra Pradesh,Kakinada,16.9891,82.2475
+Tirupati Rural,Andhra Pradesh,Tirupati,13.6288,79.4192
+Kadapa,Andhra Pradesh,Y.S.R.,14.4674,78.8241
+Anantapur,Andhra Pradesh,Anantapur,14.6819,77.6006
+Srikakulam,Andhra Pradesh,Srikakulam,18.2969,83.8970
+Karimnagar,Telangana,Karimnagar,18.4386,79.1288
+Khammam,Telangana,Khammam,17.2473,80.1514
+Nizamabad,Telangana,Nizamabad,18.6725,78.0941
+Mahbubnagar,Telangana,Mahbubnagar,16.7480,77.9890
+Adilabad,Telangana,Adilabad,19.6641,78.5320
+Nalgonda,Telangana,Nalgonda,17.0575,79.2680
+Kozhikode North,Kerala,Kozhikode,11.2600,75.7800
+Kannur,Kerala,Kannur,11.8745,75.6196
+Kollam,Kerala,Kollam,8.8932,76.6141
+Alappuzha,Kerala,Alappuzha,9.4981,76.3388
+Palakkad,Kerala,Palakkad,10.7867,76.6548
+Malappuram,Kerala,Malappuram,11.0510,76.0689
+Kottayam,Kerala,Kottayam,9.5916,76.5222
+Thrissur Town,Kerala,Thrissur,10.5300,76.2100
+Kozhencherry,Kerala,Pathanamthitta,9.1900,76.7800
+Davanagere,Karnataka,Davanagere,14.4644,75.9218
+Ballari,Karnataka,Ballari,15.1394,76.9214
+Mandya,Karnataka,Mandya,12.5236,76.8961
+Shivamogga,Karnataka,Shivamogga,13.9299,75.5681
+Tumakuru,Karnataka,Tumakuru,13.3392,77.1139
+Udupi,Karnataka,Udupi,13.3409,74.7421
+Hassan,Karnataka,Hassan,13.0000,76.1000
+Raichur,Karnataka,Raichur,16.2050,77.3550
+Bidar,Karnataka,Bidar,17.9100,77.5200
+Vijayapura,Karnataka,Vijayapura,16.8300,75.7100
+Gulbarga,Karnataka,Kalaburagi,17.3300,76.8300
+Karwar,Karnataka,Uttara Kannada,14.8100,74.1300
+Basavakalyan,Karnataka,Kalaburagi,17.3700,76.9000
+Rajpur Sonarpur,West Bengal,South 24 Parganas,22.3800,88.4000
+Haldia,West Bengal,Purba Medinipur,22.0600,88.1100
+Asansol,West Bengal,Paschim Bardhaman,23.6800,86.9800
+Durgapur,West Bengal,Paschim Bardhaman,23.5200,87.3100
+Malda,West Bengal,Malda,25.0100,88.1400
+Baharampur,West Bengal,Murshidabad,24.1000,88.2700
+Krishnanagar,West Bengal,Nadia,23.4100,88.7000
+Barasat,West Bengal,North 24 Parganas,22.7200,88.4800
+Serampore,West Bengal,Howrah,22.7300,88.3400
+Bhabua,Bihar,Kaimur,25.0400,83.8800
+Arrah,Bihar,Bhojpuri,25.5500,84.6600
+Begusarai,Bihar,Begusarai,25.4200,86.1300
+Katihar,Bihar,Katihar,25.5400,87.5700
+Muzaffarpur,Bihar,Muzaffarpur,26.1200,85.3900
+Darbhanga,Bihar,Darbhanga,26.1500,85.9000
+Purnia,Bihar,Purnia,25.7800,87.4700
+Hajipur,Bihar,Vaishali,25.6900,85.2100
+Chhapra,Bihar,Saran,25.7800,84.7500
+Motihari,Bihar,East Champaran,26.6500,84.9100
+Siwan,Bihar,Siwan,26.2200,84.3600
+Bettiah,Bihar,Paschim Champaran,26.8000,84.5000
+Jamalpur,Bihar,Jamalpur,24.9200,86.2200
+Buxar,Bihar,Buxar,25.5800,84.0000
+Bihar Sharif,Bihar,Nalanda,25.2000,85.5200
+Barh,Bihar,Patna,25.4700,85.0100
+Gopalganj,Bihar,Gopalganj,26.4700,84.4300
+Sitamarhi,Bihar,Sitamarhi,26.6000,85.5000
+Supaul,Bihar,Supaul,26.1200,86.6000
+Araria,Bihar,Araria,26.1500,87.4700
+Kishanganj,Bihar,Kishanganj,26.1000,87.8700
+Sheikhpura,Bihar,Sheikhpura,25.1400,85.8600
+Aurangabad Bihar,Bihar,Aurangabad,24.7500,84.3700
+Nawada,Bihar,Nawada,24.9200,85.4000
+Jamui,Bihar,Jamui,24.9200,86.2200
+Khagaria,Bihar,Khagaria,25.5000,86.4700
+Lakhisarai,Bihar,Lakhisarai,25.1700,86.1200
+Sheohar,Bihar,Sheohar,26.5200,85.3000
+Samastipur,Bihar,Samastipur,25.8600,85.7800
+Madhepura,Bihar,Madhepura,25.9200,86.8700
+Saharsa,Bihar,Saharsa,25.8700,86.6000
+Madhubani,Bihar,Madhubani,26.1100,86.0700
+Nalanda,Bihar,Nalanda,25.1300,85.4400
+Saran,Bihar,Saran,25.6200,84.6600
+Vaishali,Bihar,Vaishali,25.6900,85.2100
+West Champaran,Bihar,Paschim Champaran,26.8000,84.5000
+East Champaran,Bihar,East Champaran,26.6300,84.8500
+Kanpur Dehat,Uttar Pradesh,Kanpur Dehat,26.4000,79.9500
+Fatehpur,Uttar Pradesh,Fatehpur,25.9300,80.8100
+Etawah,Uttar Pradesh,Etawah,26.7800,79.0200
+Budaun,Uttar Pradesh,Budaun,28.0400,79.1200
+Hardoi,Uttar Pradesh,Hardoi,27.4200,80.1200
+Unnao,Uttar Pradesh,Unnao,26.5500,80.9900
+Rae Bareli,Uttar Pradesh,Rae Bareli,26.4100,81.2400
+Farrukhabad,Uttar Pradesh,Farrukhabad,27.3900,79.5800
+Mainpuri,Uttar Pradesh,Mainpuri,27.2300,79.1000
+Etah,Uttar Pradesh,Etah,27.6000,78.6700
+Bareilly Cantonment,Uttar Pradesh,Bareilly,28.3500,79.4200
+Pilibhit,Uttar Pradesh,Pilibhit,28.6300,79.8700
+Lakhimpur Kheri,Uttar Pradesh,Kheri,27.9000,80.7800
+Sitapur,Uttar Pradesh,Sitapur,27.5700,80.6800
+Moradabad Rural,Uttar Pradesh,Moradabad,28.8400,78.7700
+Bijnor,Uttar Pradesh,Bijnor,29.3700,78.1400
+Muzaffarnagar,Uttar Pradesh,Muzaffarnagar,29.4700,77.7000
+Saharanpur Rural,Uttar Pradesh,Saharanpur,29.9700,77.5500
+Shamli,Uttar Pradesh,Shamli,29.4500,77.3200
+Hapur,Uttar Pradesh,Hapur,28.7300,77.7800
+Gautam Buddh Nagar,Uttar Pradesh,Gautam Buddh Nagar,28.3600,77.5000
+Bulandshahr,Uttar Pradesh,Bulandshahr,28.4000,77.8500
+Mathura,Uttar Pradesh,Mathura,27.4924,77.6737
+Hathras,Uttar Pradesh,Hathras,27.5900,78.0500
+Agra Rural,Uttar Pradesh,Agra,27.1800,78.0100
+Firozabad Rural,Uttar Pradesh,Firozabad,27.3000,79.6000
+Jalaun,Uttar Pradesh,Jalaun,26.1500,79.3500
+Orai,Uttar Pradesh,Jalaun,26.0200,79.4500
+Hamirpur,Uttar Pradesh,Hamirpur,25.9500,79.9800
+Banda,Uttar Pradesh,Banda,25.4800,80.3400
+Chitrakoot,Uttar Pradesh,Chitrakoot,25.2000,80.9000
+Allahabad Rural,Uttar Pradesh,Prayagraj,25.4400,81.8500
+Mirzapur,Uttar Pradesh,Mirzapur,25.1500,82.5700
+Varanasi Rural,Uttar Pradesh,Varanasi,25.3200,82.9900
+Jaunpur,Uttar Pradesh,Jaunpur,25.8500,82.6800
+Ghazipur,Uttar Pradesh,Ghazipur,25.5800,83.5800
+Ballia,Uttar Pradesh,Ballia,25.7600,84.1500
+Deoria,Uttar Pradesh,Deoria,26.5000,83.7800
+Gorakhpur Rural,Uttar Pradesh,Gorakhpur,26.7500,83.3700
+Basti,Uttar Pradesh,Basti,27.1100,82.0300
+Azamgarh,Uttar Pradesh,Azamgarh,26.0700,83.1800
+Mau,Uttar Pradesh,Mau,25.9400,83.5500
+Kannauj,Uttar Pradesh,Kannauj,27.0600,79.9200
+Etawah Rural,Uttar Pradesh,Etawah,26.7800,79.0200
