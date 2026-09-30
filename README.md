@@ -5,9 +5,6 @@
 Scalable, real-time collection + processing + ML verification of weather reports
 for India from social media, APIs, RSS, public datasets and citizen submissions.
 
-📖 Full design document: [`docs/VaayuDrishti_Full_Workflow.pdf`](docs/VaayuDrishti_Full_Workflow.pdf)
-(13 pages: problem, architecture, data contracts, API contract, ML design, roadmap)
-
 ## Stack
 
 | Layer | Tech |
@@ -28,8 +25,6 @@ cp .env.example .env
 docker compose up -d --build
 curl http://localhost:8000/health
 ```
-
-OpenAPI docs: <http://localhost:8000/docs>
 
 Default admin: `admin@vaayu.local` / `vaayu@123` (change in `.env`).
 
