@@ -102,6 +102,9 @@ async def search_reports(
     state: Annotated[str | None, REPORT_FILTER_PARAMS["state"]] = None,
     category: Annotated[str | None, REPORT_FILTER_PARAMS["category"]] = None,
     source: Annotated[str | None, REPORT_FILTER_PARAMS["source"]] = None,
+    verification_status: Annotated[
+        str | None, REPORT_FILTER_PARAMS["verification_status"]
+    ] = None,
     include_duplicates: Annotated[bool, REPORT_FILTER_PARAMS["include_duplicates"]] = False,
 ) -> ReportPage:
     clauses = build_report_filters(
@@ -110,6 +113,7 @@ async def search_reports(
         state=state,
         category=category,
         source=source,
+        verification_status=verification_status,
         include_duplicates=include_duplicates,
     )
     ids = await _search_ids(q, page * page_size)
