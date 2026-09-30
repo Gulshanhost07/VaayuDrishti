@@ -1,0 +1,265 @@
+name: vaayudrishti
+
+x-app: &app
+  build:
+    context: ./backend
+    args:
+      INSTALL_ML: "0"
+  image: vaayudrishti/backend:latest
+  env_file: [.env]
+  volumes:
+    - ./data/reference:/app/data/reference:ro
+    - ./backend/ml/artifacts:/app/ml/artifacts
+  environment:
+    DATABASE_URL: postgresql+asyncpg://${POSTGRES_USER:-vaayu}:${POSTGRES_PASSWORD:-vaayu}@postgres:5432/${POSTGRES_DB:-vaayu}
+    KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+    REDIS_URL: redis://redis:6379/0
+    OPENSEARCH_URL: http://opensearch:9200
+    MINIO_ENDPOINT: minio:9000
+  depends_on:
+    postgres: {condition: service_healthy}
+    redpanda: {condition: service_started}
+    redis: {condition: service_healthy}
+  restart: unless-stopped
+
+services:
+  postgres:
+    image: postgis/postgis:17-3.4
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-vaayu}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-vaayu}
+      POSTGRES_DB: ${POSTGRES_DB:-vaayu}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-vaayu} -d ${POSTGRES_DB:-vaayu}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redpanda:
+    image: redpandadata/redpanda:v24.2.18
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp
+      - "1"
+      - --memory
+      - 512M
+      - --reserve-memory
+      - 0M
+      - --node-id
+      - "0"
+      - --check=false
+      - --kafka-addr
+      - internal://0.0.0.0:9092,external://0.0.0.0:19092
+      - --advertise-kafka-addr
+      - internal://redpanda:9092,external://localhost:19092
+      - --pandaproxy-addr
+      - internal://0.0.0.0:8222
+      - --advertise-pandaproxy-addr
+      - internal://redpanda:8222,external://localhost:18222
+    ports:
+      - "19092:19092"
+    volumes:
+      - redpData:/var/lib/redpanda/data
+    healthcheck:
+      test: ["CMD-SHELL", "rpk cluster info >/dev/null 2>&1 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  opensearch:
+    image: opensearchproject/opensearch:2.17.1
+    environment:
+      discovery.type: single-node
+      DISABLE_SECURITY_PLUGIN: "true"
+      OPENSEARCH_JAVA_OPTS: -Xms512m -Xmx512m
+      bootstrap.memory_lock: "true"
+    ulimits:
+      memlock: {soft: -1, hard: -1}
+    ports:
+      - "9200:9200"
+    volumes:
+      - osdata:/usr/share/opensearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:9200/_cluster/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+
+  minio:
+    image: bitnamilegacy/minio:latest
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-vaayu}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-vaayusecret}
+      MINIO_VOLUMES: /bitnami/minio/data
+      MINIO_OPTS: --console-address ":9001"
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - miniodata:/bitnami/minio
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  spark-master:
+    profiles: [full]
+    image: bitnamilegacy/spark:3.5.3
+    environment:
+      SPARK_MODE: master
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+    volumes:
+      - ./spark/jobs:/jobs:ro
+    depends_on: [redpanda, postgres]
+
+  spark-worker:
+    profiles: [full]
+    image: bitnamilegacy/spark:3.5.3
+    environment:
+      SPARK_MODE: worker
+      SPARK_MASTER_URL: spark://spark-master:7077
+      SPARK_WORKER_MEMORY: 1g
+      SPARK_WORKER_CORES: 1
+    volumes:
+      - ./spark/jobs:/jobs:ro
+    depends_on: [spark-master]
+
+  spark-jobs:
+    profiles: [full]
+    build: ./spark
+    image: vaayudrishti/spark:latest
+    environment:
+      DATABASE_URL_SYNC: postgresql+psycopg2://${POSTGRES_USER:-vaayu}:${POSTGRES_PASSWORD:-vaayu}@postgres:5432/${POSTGRES_DB:-vaayu}
+      SPARK_MASTER: spark://spark-master:7077
+    volumes:
+      - ./spark/jobs:/jobs:ro
+    depends_on:
+      spark-master: {condition: service_started}
+      postgres: {condition: service_healthy}
+      seed: {condition: service_completed_successfully}
+    command:
+      [
+        "spark-submit",
+        "--master",
+        "spark://spark-master:7077",
+        "--jars",
+        "/opt/bitnami/spark/jars/postgresql-42.7.4.jar",
+        "/jobs/rollups.py",
+      ]
+    restart: "no"
+
+  spark-stream:
+    profiles: [full]
+    build: ./spark
+    image: vaayudrishti/spark:latest
+    environment:
+      DATABASE_URL_SYNC: postgresql+psycopg2://${POSTGRES_USER:-vaayu}:${POSTGRES_PASSWORD:-vaayu}@postgres:5432/${POSTGRES_DB:-vaayu}
+      KAFKA_BOOTSTRAP_SERVERS: redpanda:9092
+      SPARK_CHECKPOINT: /tmp/spark/checkpoints/stream_ingest
+    volumes:
+      - ./spark/jobs:/jobs:ro
+    depends_on:
+      postgres: {condition: service_healthy}
+      redpanda: {condition: service_started}
+      seed: {condition: service_completed_successfully}
+    command: ["spark-submit", "--master", "local[2]", "/jobs/stream_ingest.py"]
+    restart: unless-stopped
+
+  seed:
+    <<: *app
+    command: ["python", "-m", "shared.init_db"]
+    restart: "no"
+
+  api:
+    <<: *app
+    command:
+      ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data/reference:/app/data/reference:ro
+      - ./backend/ml/artifacts:/app/ml/artifacts
+      - ./frontend:/app/frontend:ro
+    depends_on:
+      postgres: {condition: service_healthy}
+      redpanda: {condition: service_started}
+      redis: {condition: service_healthy}
+      opensearch: {condition: service_healthy}
+      minio: {condition: service_healthy}
+      seed: {condition: service_completed_successfully}
+
+  ingestor:
+    <<: *app
+    command: ["python", "-m", "ingest.scheduler"]
+    depends_on:
+      redpanda: {condition: service_started}
+      seed: {condition: service_completed_successfully}
+
+  worker-enrich:
+    <<: *app
+    command: ["python", "-m", "pipeline.enrich"]
+    deploy:
+      replicas: 4
+    depends_on:
+      redpanda: {condition: service_started}
+      minio: {condition: service_healthy}
+      postgres: {condition: service_healthy}
+      seed: {condition: service_completed_successfully}
+
+  worker-dedup:
+    <<: *app
+    command: ["python", "-m", "pipeline.dedup"]
+    depends_on:
+      redpanda: {condition: service_started}
+      postgres: {condition: service_healthy}
+      seed: {condition: service_completed_successfully}
+
+  worker-ml:
+    <<: *app
+    command: ["python", "-m", "pipeline.classify"]
+    depends_on:
+      redpanda: {condition: service_started}
+      postgres: {condition: service_healthy}
+      seed: {condition: service_completed_successfully}
+
+  worker-sink:
+    <<: *app
+    command: ["python", "-m", "pipeline.sink"]
+    depends_on:
+      redpanda: {condition: service_started}
+      postgres: {condition: service_healthy}
+      opensearch: {condition: service_healthy}
+      redis: {condition: service_healthy}
+      seed: {condition: service_completed_successfully}
+
+  adminer:
+    profiles: [tools]
+    image: adminer:4
+    ports:
+      - "8081:8080"
+    depends_on: [postgres]
+
+volumes:
+  pgdata:
+  redpData:
+  osdata:
+  miniodata:
