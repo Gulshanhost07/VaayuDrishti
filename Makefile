@@ -3,7 +3,7 @@
 COMPOSE ?= docker compose
 PY ?= python
 
-.PHONY: help env up up-full down psql logs migrate seed test lint fmt typecheck loadtest demo pdf spark-rollups spark-stream spark-up
+.PHONY: help env up up-full down psql logs migrate seed test lint fmt typecheck loadtest demo pdf spark-rollups spark-stream spark-up webapp webapp-install webapp-dev
 
 help: ## Show this help
 	@grep -E '^[a-zA-Z_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
@@ -67,3 +67,12 @@ pdf: ## Regenerate docs/VaayuDrishti_Full_Workflow.pdf
 
 demo: ## Print the 10-minute judge demo script
 	@cat scripts/demo.sh
+
+webapp-install: ## Install webapp npm dependencies
+	cd webapp && npm install
+
+webapp: ## Build the React frontend into frontend/ (served by the API)
+	cd webapp && npm run build
+
+webapp-dev: ## Start the Vite dev server on :5173 (proxies /api to :8000)
+	cd webapp && npm run dev

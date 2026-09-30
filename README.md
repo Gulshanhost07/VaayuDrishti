@@ -26,6 +26,8 @@ docker compose up -d --build
 curl http://localhost:8000/health
 ```
 
+Dashboard: <http://localhost:8000/> (the built SPA in `frontend/` is mounted by the API)
+
 Default admin: `admin@vaayu.local` / `vaayu@123` (change in `.env`).
 
 ### Useful commands
@@ -43,6 +45,8 @@ make spark-rollups
 make spark-up
 make demo
 make pdf
+make webapp
+make webapp-dev
 ```
 
 ## Data flow
@@ -76,6 +80,23 @@ default analytics, available with `include_duplicates=true`.
 | Live | `WS /live/stream` (Redis pub/sub, heartbeat) |
 | System | `GET /health` (deep checks), `GET /healthz` |
 
+## Frontend
+
+React + Vite multi-page app in `webapp/`, four entry points matching the API
+surfaces: `index.html` (dashboard), `report.html` (report detail),
+`submit.html` (citizen submission + tracking), `admin.html` (operator console).
+
+```bash
+make webapp-install   # npm install (once)
+make webapp-dev       # dev server on :5173, proxies /api to localhost:8000
+make webapp           # production build -> frontend/ (served by the API on :8000)
+```
+
+`npm run build` writes straight into `frontend/`, which the FastAPI app mounts
+at `/` with `html=True`, so a rebuild is all that is needed after API changes.
+Charts (timeseries, geo scatter, bar lists) are hand-rolled canvas - no chart
+library, no map tiles, works offline.
+
 ## Repo layout
 
 See Section 4 of the PDF for the annotated tree. Short form:
@@ -85,7 +106,8 @@ See Section 4 of the PDF for the annotated tree. Short form:
 - `data/reference/` - offline gazetteer (268 cities), aliases (Devanagari + English), hashtag vocabulary, credibility lexicon
 - `docs/` - design PDF + generator
 - `scripts/demo.sh` - the 10-minute walkthrough used with judges
-- `frontend/` - Phase 2 (spec in the PDF, not built yet)
+- `webapp/` - React/Vite source for the dashboard, report, submit and admin pages
+- `frontend/` - production build output of `webapp/` (mounted by the API, committed)
 
 ## Verification status workflow
 
